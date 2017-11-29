@@ -6,9 +6,8 @@
 </div>
 
 <div class="list">
-	<h2>Here are some links to help you start: </h2>
 	<ul>
-		<li>
+		<li >
 			<h3>{{p1.nom}}</h3>
 			<p>{{p1.description}}</p>
 		</li>
@@ -37,5 +36,53 @@
 	<div>
 		<textarea rows="10" cols="80" [(ngModel)]="p1.description"></textarea>
 	</div>
-	
 </div>
+
+<div class="container">
+
+	<div class="row">
+		
+		<div class="col-4">
+		
+			<div id="1" (click)="clickOn(1)"> 1 </div>
+			<div id="2" (click)="clickOn(2)"> 2 </div>
+			<div id="3" (click)="clickOn(3)"> 3 </div>
+			<div id="+" (click)="clickOn('+')"> + </div>
+		
+		</div>		
+		<div class="col-4">
+		
+			<div id="4" (click)="clickOn(4)"> 4 </div>
+			<div id="5" (click)="clickOn(5)"> 5 </div>
+			<div id="6" (click)="clickOn(6)"> 6 </div>
+			<div id="-" (click)="clickOn('-')"> - </div>
+		
+		</div>		
+		<div class="col-4">
+		
+			<div id="7" (click)="clickOn(7)"> 7 </div>
+			<div id="8" (click)="clickOn(8)"> 8 </div>
+			<div id="9" (click)="clickOn(8)"> 9 </div>
+			<div id="*" (click)="clickOn('*')"> * </div>
+		
+		</div>
+			<div class="col-4 offset-4">
+		
+			<div id="=" (click)="resultat()"> = </div>		
+		
+		</div>
+	
+	</div>
+
+</div>
+
+	<div class="row result">
+	
+		<div class="col-md-4">
+		
+			{{result}}
+		
+		</div>
+	
+	</div>
+

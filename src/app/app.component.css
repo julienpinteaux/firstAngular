@@ -22,3 +22,19 @@ ul{
 .input_prenom{
 	margin-bottom : 20px;
 }
+
+.container{
+	width : 100px;
+	height : 100px;
+	margin-top : 50px;
+}
+.result{
+	margin : auto;
+	width : 300px;
+	border : solid 1px grey;
+	margin-top : 20px;
+}
+
+.button{
+	background-color : grey;
+}
