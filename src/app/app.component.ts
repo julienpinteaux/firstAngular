@@ -1,14 +1,16 @@
 import { Component } from '@angular/core';
 
 class Personne{
-	var nom : string;
-	var prenom : string;
-	var description : string;
+	nom : String;
+	prenom : String;
+	description : String;
+	travail : String;
 	
-	function Personne(nom,prenom,description){
+	constructor(nom : String, prenom : String, description : String, travail : String){
 		this.nom = nom;
 		this.prenom = prenom;
 		this.description = description;
+		this.travail = travail;
 	}
 }
 
