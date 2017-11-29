@@ -4,13 +4,11 @@ class Personne{
 	nom : String;
 	prenom : String;
 	description : String;
-	travail : String;
 	
-	constructor(nom : String, prenom : String, description : String, travail : String){
+	constructor(nom : String, prenom : String, description : String){
 		this.nom = nom;
 		this.prenom = prenom;
 		this.description = description;
-		this.travail = travail;
 	}
 }
 
