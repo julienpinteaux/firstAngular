@@ -1,0 +1,20 @@
+.list{
+	width : 800px;
+	text-align:center;
+	margin:auto;
+}
+
+ul{
+	list-style-type : none;
+	padding : 0;
+}
+
+.titre{
+	text-align:center;
+	justify-content : center;
+	background-color : #d4d4d4;	
+}
+
+.titre h1{
+	margin-top : 0;
+}
