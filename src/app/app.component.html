@@ -6,11 +6,11 @@
 </div>
 
 <ol>
-	<li *ngFor="let p of liste"> {{p.prenom}} {{p.nom }} </li>
+	<li (click)="myFunction(p);" *ngFor="let p of liste"> {{p.prenom}} {{p.nom }} </li>
 </ol>
 
 <h2>Détail sur {{personne.prenom}} {{personne.nom}} </h2>
-<ul>
+<ul> 	
 	<li><b>Nom : </b>{{personne.nom}}</li>
 	<li><b>Prenom : </b>{{personne.prenom}}</li>
 	<li><b>Description : </b>{{personne.description}}</li>
@@ -22,7 +22,7 @@
 	<li>Nom : <input [(ngModel)]="personne.nom" /></li>
 	<li>Prenom : <input [(ngModel)]="personne.prenom" /></li>
 	<li>Travail Principal : <input [(ngModel)]="personne.travail" /></li>
-	<li>Résumé : <textarea  [(ngModel)]="personne.description" ></textarea></li>
+	<li>Résumé : <textarea rows="6" cols="150" [(ngModel)]="personne.description" ></textarea></li>
 	
 	
 </ul>
