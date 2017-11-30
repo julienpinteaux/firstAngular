@@ -1,35 +1,30 @@
 import { Component } from '@angular/core';
 
-class Personne{
-	nom : String;
-	prenom : String;
-	description : String;
-	
-	constructor(nom : String, prenom : String, description : String){
-		this.nom = nom;
-		this.prenom = prenom;
-		this.description = description;
-	}
-}
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
 
-	title:String = 'my App';
-	
-	p1:Personne = new Personne("Einsten","Albert","Albert Einstein (prononcé en allemand [ˈalbɐt ˈaɪnʃtaɪn] Prononciation du titre dans sa version originale Écouter) né le 14 mars 1879N 1 à Ulm, dans le Wurtemberg, et mort le 18 avril 1955 à Princeton, dans le New Jersey, est un physicien théoricien. Il fut successivement allemand, apatride (1896), suisse (1901) et de double nationalité helvético-américaine (1940)1. Il fut le camarade d'études de Mileva Marić, puis, en première noce, son époux. Il fut le cousin d'Elsa Einstein, dont il fut, en seconde noce, l'époux.");
-	
-	result:String = " ";
-	
-	clickOn:Function = function(id){
-		this.result += ""+id;
-	}
-	
-	resultat:Function = function(){
-		this.result = eval(this.result);
-	}
+export class AppComponent {
+  title = 'Liste des Scientifiques';
+  
+  liste = [{nom :"Einstein", prenom : "Albert", description :"Il publie sa théorie de la relativité restreinte en 1905 et sa théorie de la gravitation dite relativité générale en 1916. Il contribue largement au développement de la mécanique quantique et de la cosmologie, et reçoit le prix Nobel de physique de 1921 pour son explication de l’effet photoélectrique2. Son travail est notamment connu du grand public pour l’équation E=mc2, qui établit une équivalence entre la matière et l’énergie d’un système.", travail : "Relativité Générale"},
+		  {nom :"Faraday", prenom : "Michael", description :"Il publie sa théorie de la relativité restreinte en 1905 et sa théorie de la gravitation dite relativité générale en 1916. Il contribue largement au développement de la mécanique quantique et de la cosmologie, et reçoit le prix Nobel de physique de 1921 pour son explication de l’effet photoélectrique2. Son travail est notamment connu du grand public pour l’équation E=mc2, qui établit une équivalence entre la matière et l’énergie d’un système.", travail : "Relativité Générale"},
+		  {nom :"Curie", prenom : "Marie", description :"Il publie sa théorie de la relativité restreinte en 1905 et sa théorie de la gravitation dite relativité générale en 1916. Il contribue largement au développement de la mécanique quantique et de la cosmologie, et reçoit le prix Nobel de physique de 1921 pour son explication de l’effet photoélectrique2. Son travail est notamment connu du grand public pour l’équation E=mc2, qui établit une équivalence entre la matière et l’énergie d’un système.", travail : "Relativité Générale"},
+          {nom :"Curie", prenom : "Pierre", description :"Il publie sa théorie de la relativité restreinte en 1905 et sa théorie de la gravitation dite relativité générale en 1916. Il contribue largement au développement de la mécanique quantique et de la cosmologie, et reçoit le prix Nobel de physique de 1921 pour son explication de l’effet photoélectrique2. Son travail est notamment connu du grand public pour l’équation E=mc2, qui établit une équivalence entre la matière et l’énergie d’un système.", travail : "Relativité Générale"}]
+  
+  personne = {
+				nom :"Einstein",
+				prenom : "Albert",
+				description :"Il publie sa théorie de la relativité restreinte en 1905 et sa théorie de la gravitation dite relativité générale en 1916. Il contribue largement au développement de la mécanique quantique et de la cosmologie, et reçoit le prix Nobel de physique de 1921 pour son explication de l’effet photoélectrique2. Son travail est notamment connu du grand public pour l’équation E=mc2, qui établit une équivalence entre la matière et l’énergie d’un système.",
+				travail : "Relativité Générale"
+			};	
+			
+  count = 0;
+  
+  clickEffectue = function(){
+		this.count++;
+		this.personne.nom = this.personne.nom +" "+ this.count;
+  }
 }

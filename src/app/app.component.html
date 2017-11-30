@@ -1,88 +1,28 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div class="titre">
+<div style="text-align:center">
   <h1>
-	Welcome to {{ title }}!
+    {{ title }}
   </h1>
 </div>
 
-<div class="list">
-	<ul>
-		<li >
-			<h3>{{p1.nom}}</h3>
-			<p>{{p1.description}}</p>
-		</li>
-		<li>
-			<h3><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h3>
-		</li>
-		<li>
-			<h3><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h3>
-		</li>
-	</ul>
-	
-	<div>
-		<label>Nom</label>
-		<input [(ngModel)]="p1.nom" placeholder="Nom" />
-	</div>
-	
-	<div class="input_prenom">
-		<label>Prenom</label>
-		<input [(ngModel)]="p1.prenom" placeholder="Nom" />
-	</div>
-	
-	<div>
-		<label>Description</label>
-	</div>
-	
-	<div>
-		<textarea rows="10" cols="80" [(ngModel)]="p1.description"></textarea>
-	</div>
-</div>
+<ol>
+	<li *ngFor="let p of liste"> {{p.prenom}} {{p.nom }} </li>
+</ol>
 
-<div class="container">
+<h2>Détail sur {{personne.prenom}} {{personne.nom}} </h2>
+<ul>
+	<li><b>Nom : </b>{{personne.nom}}</li>
+	<li><b>Prenom : </b>{{personne.prenom}}</li>
+	<li><b>Description : </b>{{personne.description}}</li>
+	<li><b>Travail : </b>{{personne.travail}}</li>
+</ul>
 
-	<div class="row">
-		
-		<div class="col-4">
-		
-			<div id="1" (click)="clickOn(1)"> 1 </div>
-			<div id="2" (click)="clickOn(2)"> 2 </div>
-			<div id="3" (click)="clickOn(3)"> 3 </div>
-			<div id="+" (click)="clickOn('+')"> + </div>
-		
-		</div>		
-		<div class="col-4">
-		
-			<div id="4" (click)="clickOn(4)"> 4 </div>
-			<div id="5" (click)="clickOn(5)"> 5 </div>
-			<div id="6" (click)="clickOn(6)"> 6 </div>
-			<div id="-" (click)="clickOn('-')"> - </div>
-		
-		</div>		
-		<div class="col-4">
-		
-			<div id="7" (click)="clickOn(7)"> 7 </div>
-			<div id="8" (click)="clickOn(8)"> 8 </div>
-			<div id="9" (click)="clickOn(8)"> 9 </div>
-			<div id="*" (click)="clickOn('*')"> * </div>
-		
-		</div>
-			<div class="col-4 offset-4">
-		
-			<div id="=" (click)="resultat()"> = </div>		
-		
-		</div>
+<h2>Modification</h2>
+<ul>
+	<li>Nom : <input [(ngModel)]="personne.nom" /></li>
+	<li>Prenom : <input [(ngModel)]="personne.prenom" /></li>
+	<li>Travail Principal : <input [(ngModel)]="personne.travail" /></li>
+	<li>Résumé : <textarea  [(ngModel)]="personne.description" ></textarea></li>
 	
-	</div>
-
-</div>
-
-	<div class="row result">
 	
-		<div class="col-md-4">
-		
-			{{result}}
-		
-		</div>
-	
-	</div>
-
+</ul>
