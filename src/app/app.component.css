@@ -5,3 +5,12 @@ ul {
 li{
 	margin-top : 10px;
 }
+
+.erreur{
+	background-color : red;
+	content : "Rentrez un nom";
+}
+
+.selected{
+	background-color : pink;
+}
